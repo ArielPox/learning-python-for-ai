@@ -16,11 +16,14 @@ class Student(Person):
         super().__init__(name,age)
         self.score=score
         self.grade=grade
-    # 方法重写 当子类中有一个与父类相同的方法 那么子类中的方法就会覆盖弗雷的方法
-    def show(self,msg):
-        # 还是可以调用父类的方法
-        super().show(msg)
-        print(f'show the children msg: {msg}')
 
+P1=Person('andy',18)
 S1=Student('andy',18,100,'A')
-S1.show('hi')
+print('isinstance(instance,Class)可以判断实例是不是指定的类或者子类的实例')
+print(isinstance(P1,Person))
+print(isinstance(S1,Person))
+print(isinstance(P1, Student))
+print(isinstance(S1, Student))
+
+print('issubclass(class1,Class2)可以判断class1是不是class2的子类')
+print(issubclass(Student,Person))

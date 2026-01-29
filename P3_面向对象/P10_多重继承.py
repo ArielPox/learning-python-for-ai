@@ -11,16 +11,20 @@ class Person:
     def show(self,msg):
         print(f"show the parent msg:{msg}")
 
-class Student(Person):
-    def __init__(self,name,age,score, grade):
-        super().__init__(name,age)
+class Worker:
+    def __init__(self,workplace,salary):
+        self.workplace=workplace
+        self.salary=salary
+
+class Student(Person,Worker):
+    def __init__(self,name,age,score, grade,workplace,salary):
+        # 多重继承可以显示调用父类的方法
+        Person.__init__(self,name,age)
+        Worker.__init__(self,workplace,salary)
         self.score=score
         self.grade=grade
-    # 方法重写 当子类中有一个与父类相同的方法 那么子类中的方法就会覆盖弗雷的方法
-    def show(self,msg):
-        # 还是可以调用父类的方法
-        super().show(msg)
-        print(f'show the children msg: {msg}')
 
-S1=Student('andy',18,100,'A')
-S1.show('hi')
+S=Student('andy',18,100,'A','beijing',1000)
+print(S.__dict__)
+print("_mro_可以查看的属性与方法的查找方法")
+print(Student.__mro__)
