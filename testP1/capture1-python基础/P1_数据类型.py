@@ -1,0 +1,5 @@
+print("判断数据类型")
+print(type('18'))
+print(type(18))
+print(type('1.1'))
+print(type(1.1))
