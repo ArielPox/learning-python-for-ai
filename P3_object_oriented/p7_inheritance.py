@@ -21,9 +21,7 @@ class Student(Person):
           # 子类特有的部分需要手动完成初始化
           self.score=score
 
-
 S1=Student('andy',18,100)
 print(S1.__dict__)
 # 子类使用方法 使用冒泡的方式往上找方法
 S1.speak('hi')
-
