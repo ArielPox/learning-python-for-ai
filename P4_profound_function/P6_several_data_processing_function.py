@@ -1,6 +1,4 @@
 # 语法格式：map(操作函数，迭代对象)
-
-
 nums=[10,20,30]
 def doublen( n):
     return n*2
@@ -32,7 +30,7 @@ people=[
 result4=list(filter(lambda p:p['age']>30,people))
 print(result4)
 
-# filterb不会立即筛选只有在需要结果的时候在执行，返回迭代的迭代器对象
+# filter不会立即筛选只有在需要结果的时候在执行，返回迭代的迭代器对象
 #一旦遍历完成就被耗尽 可能影响元素的个数
 
 # filter的特殊用法 如果没有传递过滤函数 就会自动的过滤掉假值

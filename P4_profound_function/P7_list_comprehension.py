@@ -8,7 +8,7 @@ print(list2)
 list3=[i*i for i in list1 if i%2==0]
 print(list3)
 
-# 字典推导式
+# 字典推导式 满足的最短的一个
 names=['andy','bob','candy']
 scores=[90,80,70]
 dic={names[i]:scores[i] for i in range(len(names))}
