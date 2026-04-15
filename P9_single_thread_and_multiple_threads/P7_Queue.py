@@ -1,7 +1,10 @@
 from multiprocessing import Queue
 
 from numpy.matlib import empty
+from multiprocessing import Process
 
+from P1_function.P3_function_return_value import result
+import time
 # 创建队列 不限制大小
 q=Queue()
 
@@ -36,7 +39,10 @@ print(q1.qsize())
 # 4.put_nowait方法：直接给队列中加元素 不会进入等待模式，如果队列已经满了，就会抛出异常 等价于put(元素，block=False)
 # 5.get(timeout): 从队列中获取元素，如果队列为空，则等待指定的时间
 # 6.get_nowait(): 从队列中获取元素，如果队列为空，则直接抛出异常 等价于get(block=False)
-
+def test(q):
+    time.sleep(3)
+    result=q.get()
+    print(f'子进程获取的元素是：{result}')
 # 多进程演示 队列满之后 再次put会等待
 if __name__ == '__main__':
     # 创建一个队列
