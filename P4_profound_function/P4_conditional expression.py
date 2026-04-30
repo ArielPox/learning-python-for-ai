@@ -2,7 +2,7 @@
 # 条件表达式：根据条件真假 在两个结果中二选一 又称之为三元表达式三目运算符
 print("条件表达式: 值 if 条件1为true else 值2")
 age=19
-text='adult' if age>=18 else age<18
+text='adult' if age>=18 else 'age<18'
 print(text)
 
 is_vip=True

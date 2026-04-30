@@ -1,7 +1,4 @@
-# 通过 [表达式 for 变量 in 迭代对象] 生成新的列表
-from P4_profound_function.P6_several_data_processing_function import result
-
-list1=[1,2,3,4,5,6,7,8,9,10]
+# 通过 [表达式 for 变量 in 迭代对象] 生成新的列表list1=[1,2,3,4,5,6,7,8,9,10]
 list2=[i*i for i in list1]
 print(list2)
 # 带条件的列表生成
